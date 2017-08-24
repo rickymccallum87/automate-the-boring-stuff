@@ -6,7 +6,12 @@ def collatz(number):
   print(new)
   return new
 
-number = int(input('Enter an integer: '))
+while True:
+  try:
+    number = int(input('Enter a number: '))
+    break
+  except:
+    print('You must enter an integer.')
 
 while number != 1:
   number = collatz(number)
